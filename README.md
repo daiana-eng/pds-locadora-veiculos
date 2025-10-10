@@ -28,7 +28,8 @@ O projeto tem como objetivo desenvolver um sistema em C++ capaz de:
 
   •  Gerenciar operações da locadora, incluindo cadastro de clientes, veículos, agências e contratos de aluguel.
 
-  •  Apoiar a tomada de decisão logística por meio de heurísticas de pesquisa operacional, analisando os níveis de estoque em todas as agências e sugerindo planos de transferência de veículos que atendam à demanda com menor custo possível.
+  •  Apoiar a tomada de decisão logística por meio de heurísticas de pesquisa operacional, analisando os níveis de estoque  
+        em todas as agências e sugerindo planos de transferência de veículos que atendam à demanda com menor custo possível.
 
 
 # Metodologia 📝

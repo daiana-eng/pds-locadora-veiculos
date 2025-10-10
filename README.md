@@ -3,6 +3,7 @@
 Sistema de Gestão e Otimização de Frota para Locadoras Multilocais
 
 Integrantes
+
 	•	Amanda Senario
 	•	Daiana David Rodrigues
 	•	Davi Aredes

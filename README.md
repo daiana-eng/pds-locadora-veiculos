@@ -6,11 +6,11 @@ Integrantes:
 
 	•	Amanda Senario
 	•	Daiana David Rodrigues
-	•	Davi Aredes
+	•	Davi Oliveira Aredes de Paula
 	•	Jamile Fonseca
 
 
-# Descrição do Problema✏️
+# Descrição do Problema ✏️
 
 Locadoras de veículos que operam em múltiplas agências enfrentam o desafio de equilibrar a disponibilidade da frota para atender à demanda em diferentes localidades.
 
@@ -18,7 +18,7 @@ A ausência de um veículo específico em determinada agência pode gerar perda 
 
 
 
-# Objetivos do Projeto🎯
+# Objetivos do Projeto 🎯
 
 O projeto tem como objetivo desenvolver um sistema em C++ capaz de:
 	•	Gerenciar operações da locadora, incluindo cadastro de clientes, veículos, agências e contratos de aluguel.

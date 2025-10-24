@@ -43,7 +43,4 @@ class Veiculo {
 };
 
 
-
-
-
 #endif // VEICULO_H

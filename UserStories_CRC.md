@@ -161,7 +161,7 @@ Responsabilidades:
 
 Colaboradores:
 1. Cliente: Para consultar dados dos clientes e realizar alterações se necessário.
-Veículos: Para cadastrar um veículo, consultar  e alterar status.
+2. Veículos: Para cadastrar um veículo, consultar  e alterar status.
 
 
 

@@ -2,6 +2,7 @@
 #define CLIENTE_H
 
 #include <string>
+#include <map>
 
 class Veiculo;
 class ContratoDeAlugel;
@@ -44,6 +45,8 @@ class Cliente {
 
       void associarContrato(ContratoDeAlugel* contrato);
       ContratoDeAlugel* getContrato() const;
+      
+      void atualizarDados(std::map<int, Cliente>& cadastroCliente_);
 
       private:
       std::string nome;
@@ -58,7 +61,6 @@ class Cliente {
       Veiculo* veiculoAlugado;
 
       ContratoDeAlugel* contratoAtual;
-
 
 
 

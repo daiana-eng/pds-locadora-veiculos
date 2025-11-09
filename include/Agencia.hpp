@@ -20,7 +20,7 @@ class Agencia{
     Agencia(const std::string& nome, const std::string& endereco);
 
     std::string getnome() const;
-    std::string getEndereço() const;
+    std::string getEndereco() const;
 
     const std::vector<Veiculo*>& getFrota() const;
 
@@ -30,7 +30,7 @@ class Agencia{
 
     //função parar tirar um carro da lista
 
-    void removerVeiculo(*Veiculo* veiculo);
+    void removerVeiculo(Veiculo* veiculo);
 
 
 };

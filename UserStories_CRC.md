@@ -55,16 +55,6 @@ Como gerente eu quero organizar a capacidade de cada locadora para otimizar a al
 
 
 
-
-
-
-
-
-
-
-
-
-
 CARTÕES CRC
 
 

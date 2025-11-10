@@ -2,7 +2,6 @@
 #define VEICULO_H
 
 #include<string>
-#include<iostream>
 
 enum class StatusVeiculo {
     DISPONIVEL,
@@ -15,18 +14,18 @@ class Veiculo {
 
     std::string _placa;
     std::string _marca;
-    string _modelo;
+    std::string _modelo;
     int _ano;
     int _km;
     StatusVeiculo status;
-    std::categoria;
+    std::string _categoria;
 
     public:
 
     Veiculo(const std::string& placa, const std::string& marca, 
     const std::string& modelo, int ano, const std::string& categoria);
     
-    virtual ~Veiculo() = default;
+    virtual ~Veiculo() = default;  
 
 
     std::string getPlaca() const;
@@ -38,7 +37,7 @@ class Veiculo {
 
     void setStatus(StatusVeiculo novostatus);
 
-    virtual double getPrecoDiaria() const = 0
+    virtual double getPrecoDiaria() const = 0;
 
 };
 

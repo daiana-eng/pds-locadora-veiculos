@@ -12,7 +12,7 @@ _id(id),
 _cliente(cliente),
 _veiculo(veiculo),
 _agenciaRetirada(agenciaRetirada),
-_agenciaDevolução(nullprt),
+_agenciaDevolução(nullptr),
 _dataRetirada(dataRetirada),
 _dataPrevisao(dataPrevisao),
 _dataDevolucao(""),
@@ -20,12 +20,13 @@ _status(StatusContrato::ATIVO),
 _valorDoContrato(0.0)
 
 {
-    if(_veiculo != nullprt){
-  _veiculo->setStatus(StatusVeiculo::ALUGADO)
+if (_veiculo != nullptr) { 
+        _veiculo->setStatus(StatusVeiculo::ALUGADO); 
     }
 }
 
-void Contrato::finalizar(const std::string& _dataDevolucao, Agencia* agenciaDevolucao){
+
+void Contrato::finalizar(const std::string& dataDevolucao, Agencia* agenciaDevolucao){
     this->_dataDevolucao = dataDevolucao;
     _agenciaDevolução = agenciaDevolucao;
     _status = StatusContrato::FINALIZADO;
@@ -52,7 +53,7 @@ void Contrato::calcularValorContrato(){
     double diaria = _veiculo->getPrecoDiaria()
 
 
-int dias_alugados;
+int dias_alugados = 5;
 
 _valorDoContrato = diaria * dias_alugados;
 

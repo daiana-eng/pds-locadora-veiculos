@@ -22,7 +22,7 @@ class Contrato{
     Veiculo* _veiculo;
     Agencia* _agenciaRetirada;
     Agencia* _agenciaDevolução;
-
+    
     std::string _dataRetirada;
     std::string _dataPrevisao;
     std::string _dataDevolucao;
@@ -35,7 +35,7 @@ class Contrato{
 
     Contrato(int id, Cliente* cliente, Veiculo* veiculo,
     Agencia* agenciaRetirada, std::string& dataRetirada,
-     std::string& dataPrevisao);
+    int _diarias_previstas, std::string& dataPrevisao);
 
      void finalizar(const std::string& _dataDevolucao, Agencia* agenciaDevolucao);
     

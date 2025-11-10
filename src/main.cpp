@@ -247,9 +247,6 @@ int main(){
             cadastrarAgencia(cadastroAgencia);
             break;
 
-
-
-
         case 3:
             atualizarDados(cadastroCliente_);
             break;
@@ -257,6 +254,8 @@ int main(){
 
         case 4:
             cadastrarNovoVeiculo(cadastroAgencia);
+            break;
+
        
         case 5:
             continua = false;
@@ -270,6 +269,6 @@ int main(){
     }
    
     return 0;
-}
+} 
 
 

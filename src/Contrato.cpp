@@ -50,13 +50,13 @@ Veiculo* Contrato::getVeiculo() const{
 }
 
 void Contrato::calcularValorContrato(){
-    double diaria = _veiculo->getPrecoDiaria()
+    double diaria = _veiculo->getPrecoDiaria();
 
 
 int dias_alugados = 5;
 
 _valorDoContrato = diaria * dias_alugados;
 
--veiculo->setStatus(StatusVeiculo::DISPONIVEL)
+_veiculo->setStatus(StatusVeiculo::DISPONIVEL);
 
 }

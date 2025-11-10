@@ -113,6 +113,7 @@ void cadastrarAgencia(std::map<std::string, Agencia>& cadastroAgencia){
     cadastroAgencia.insert({t_nome,registraAgencia});
 }
 
+<<<<<<< HEAD
 void cadastrarNovoVeiculo(std::map<std::string, Agencia>& cadastroAgencia){
     std::cout << "Digite o nome da agencia onde o veiculo sera registrado" << std::endl;
     std::string nomeAgencia;
@@ -167,6 +168,8 @@ void cadastrarNovoVeiculo(std::map<std::string, Agencia>& cadastroAgencia){
     }
 }
 
+=======
+>>>>>>> 255af916a223fcce8a023c0adbb55c1f1f86f2ab
 
 int main(){
    
@@ -195,12 +198,17 @@ int main(){
         case 3:
             atualizarDados(cadastroCliente_);
             break;
+<<<<<<< HEAD
 
         case 4:
             cadastrarNovoVeiculo(cadastroAgencia);
             break;
        
         case 5:
+=======
+       
+        case 4:
+>>>>>>> 255af916a223fcce8a023c0adbb55c1f1f86f2ab
             continua = false;
              break;
         default:
@@ -213,3 +221,7 @@ int main(){
    
     return 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 255af916a223fcce8a023c0adbb55c1f1f86f2ab

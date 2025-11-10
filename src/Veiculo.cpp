@@ -1,9 +1,9 @@
 #include "Veiculo.hpp"
 #include <iostream>
 
-Veiculo::Veiculo(const::string& placa, const std::string& marca, 
+Veiculo::Veiculo(const std::string& placa, const std::string& marca, 
 const std::string& modelo, int ano, const std::string& categoria):
-_placa(placa), _marca(placa), _modelo(modelo), _ano(ano), km(0), _categoria(categoria)
+_placa(placa), _marca(marca), _modelo(modelo), _ano(ano), km(0), _categoria(categoria)
 
 {
     status = StatusVeiculo::DISPONIVEL;

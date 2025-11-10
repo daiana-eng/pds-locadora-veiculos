@@ -113,6 +113,63 @@ void cadastrarAgencia(std::map<std::string, Agencia>& cadastroAgencia){
     cadastroAgencia.insert({t_nome,registraAgencia});
 }
 
+<<<<<<< HEAD
+void cadastrarNovoVeiculo(std::map<std::string, Agencia>& cadastroAgencia){
+    std::cout << "Digite o nome da agencia onde o veiculo sera registrado" << std::endl;
+    std::string nomeAgencia;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max()) << std::endl;
+    std::getline(std::cin, nomeAgencia);
+
+    auto it = cadastroAgencia.find(nomeAgencia);
+    if(it == cadastroAgencia.end()){
+        return;
+    }
+
+    Agencia& agencia = it->second;
+
+    std::cout << "Selecione a categoria: 1.Economico, 2.Luxo" << std::endl;
+
+    int categoria;
+    std::cin >> categoria;
+
+    std::string placa, marca, modelo;
+    int ano;
+
+    std::cout << "Digite a placa" << std::endl;
+    std::getline(std::cin, placa);
+
+    std::cout << "Digite a marca" << std::endl;
+    std::getline(std::cin, marca);
+
+    std::cout << "Digite o modelo" << std::endl;
+    std::getline(std::cin,modelo);
+
+    std::cout << "Digite o ano" << std::endl;
+    std::cin >> ano;
+
+    Veiculo* veiculoRecemCadastro = nullptr;
+
+    switch (categoria)
+    {
+    case 1:
+        veiculoRecemCadastro = new VeiculoEconomico(placa,marca,modelo,ano);
+        break;
+
+    case 2: 
+        veiculoRecemCadastro = new VeiculoLuxo(placa,marca,modelo,ano);
+        break;
+    
+    default:
+        break;
+    }
+
+    if(veiculoRecemCadastro != nullptr) {
+        agencia.adicionarVeiculo(veiculoRecemCadastro);
+    }
+}
+
+=======
+>>>>>>> 255af916a223fcce8a023c0adbb55c1f1f86f2ab
 
 int main(){
    
@@ -141,8 +198,17 @@ int main(){
         case 3:
             atualizarDados(cadastroCliente_);
             break;
+<<<<<<< HEAD
+
+        case 4:
+            cadastrarNovoVeiculo(cadastroAgencia);
+            break;
+       
+        case 5:
+=======
        
         case 4:
+>>>>>>> 255af916a223fcce8a023c0adbb55c1f1f86f2ab
             continua = false;
              break;
         default:
@@ -155,3 +221,7 @@ int main(){
    
     return 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 255af916a223fcce8a023c0adbb55c1f1f86f2ab

@@ -17,15 +17,6 @@ class VeiculoEconomico : public Veiculo{
     static const std::map<std::string, double> _tabelaDePrecos;
 };
 
+VeiculoLuxo.cpp
 #endif
 
-
-
-
-
-
-
-
-
-
-#endif

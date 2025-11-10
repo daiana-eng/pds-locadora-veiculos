@@ -38,3 +38,5 @@ StatusVeiculo Veiculo::getStatus() const {
     return status;
 }
 
+
+

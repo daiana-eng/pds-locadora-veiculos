@@ -3,6 +3,7 @@
 
 #include<string>
 
+
 enum class StatusVeiculo {
     DISPONIVEL,
     ALUGADO,
@@ -25,7 +26,7 @@ class Veiculo {
     Veiculo(const std::string& placa, const std::string& marca, 
     const std::string& modelo, int ano, const std::string& categoria);
     
-    virtual ~Veiculo() = default;  
+    virtual ~Veiculo() = default;
 
 
     std::string getPlaca() const;

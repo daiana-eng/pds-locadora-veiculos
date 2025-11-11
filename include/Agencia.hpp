@@ -1,24 +1,20 @@
 #ifndef AGENCIA_H
 #define AGENCIA_H
 
-#include<string>
-#include<vector>
+#include <string>
+#include <vector>
 
-class Veiculo;
+class Veiculo; // Forward declaration
 
-class Agencia{
+class Agencia {
 
-    private:
-
+private:
     std::string _nome;
     std::string _endereco;
-
     std::vector<Veiculo*> _frotaLocal;
 
-    public:
-
+public:
     Agencia(const std::string& nome, const std::string& endereco);
-
     ~Agencia();
 
     std::string getnome() const;
@@ -27,14 +23,11 @@ class Agencia{
     const std::vector<Veiculo*>& getFrota() const;
 
     //função para add um carro na lista
-
     void adicionarVeiculo(Veiculo* veiculo);
 
     //função parar tirar um carro da lista
-
-    void removerVeiculo(*Veiculo* veiculo);
-
-
+    // CORREÇÃO: Removido o '*' extra antes de 'Veiculo*'
+    void removerVeiculo(Veiculo* veiculo); 
 };
 
 #endif // AGENCIA_H

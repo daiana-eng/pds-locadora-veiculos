@@ -1,3 +1,5 @@
+// Nome do Arquivo: include/Agencia.hpp
+
 #ifndef AGENCIA_H
 #define AGENCIA_H
 
@@ -25,9 +27,13 @@ public:
     //função para add um carro na lista
     void adicionarVeiculo(Veiculo* veiculo);
 
-    //função parar tirar um carro da lista
-    // CORREÇÃO: Removido o '*' extra antes de 'Veiculo*'
-    void removerVeiculo(Veiculo* veiculo); 
+    /**
+     * @brief Remove um veículo da frota local (pela placa) e retorna o ponteiro.
+     * Não deleta o veículo.
+     * @param placa A placa do veículo a ser removido.
+     * @return O ponteiro para o Veiculo removido, ou nullptr se não encontrado.
+     */
+    Veiculo* removerVeiculo(const std::string& placa); 
 };
 
 #endif // AGENCIA_H

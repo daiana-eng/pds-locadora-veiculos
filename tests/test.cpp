@@ -16,7 +16,7 @@ void testCriacaoAgencia() {
     assert(agencia.getnome() == "Agencia Central");
     assert(agencia.getEndereço() == "Rua A, 123");
     assert(agencia.getFrota().size() == 0);
-    std::cout << "PASS: testCriacaoAgencia" << std::endl;
+    std::cout << "testCriacaoAgencia" << std::endl;
 }
 
 void testAdicionarVeiculo() {
@@ -36,7 +36,7 @@ void testAdicionarVeiculo() {
     assert(agencia.getFrota().size() == 2);
     assert(agencia.getFrota()[1]->getModelo() == "Ferrari");
 
-    std::cout << "PASS: testAdicionarVeiculo" << std::endl;
+    std::cout << "testAdicionarVeiculo" << std::endl;
     
     // O ~Agencia() deletará v1 e v2
 }
@@ -48,7 +48,7 @@ void testPrecoDiaria() {
     Veiculo* porsche = new VeiculoLuxo("LUX-0001", "Porsche", "Porsche", 2024);
     assert(porsche->getPrecoDiaria() == 4450.00); // Valor de VeiculoLuxo.cpp
 
-    std::cout << "PASS: testPrecoDiaria" << std::endl;
+    std::cout << "testPrecoDiaria" << std::endl;
     
     delete mobi;
     delete porsche;

@@ -1,5 +1,7 @@
 #include "VeiculoEconomico.hpp"
+#include "Veiculo.hpp"
 #include <iostream>
+#include <string>
 
 const std::map<std::string, double> VeiculoEconomico::_tabelaDePrecos = {
     {"Mobi", 600.00}, 
@@ -23,6 +25,4 @@ double VeiculoEconomico::getPrecoDiaria() const override{
     }
     
 }
-
-VeiculoLuxo.cpp
  

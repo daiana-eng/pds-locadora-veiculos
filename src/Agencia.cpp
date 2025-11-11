@@ -1,4 +1,5 @@
 #include "Agencia.hpp"
+#include <string>
 #include "Veiculo.hpp"
 #include <iostream>
 
@@ -26,7 +27,7 @@
 
     //função parar tirar um carro da lista
 
-    void removerVeiculo(*Veiculo* veiculo){
+    void removerVeiculo(Veiculo* veiculo){
         for(auto it = this->_frotaLocal.begin(); it != _frotaLocal.end(); ++it){
             if(*it == veiculo){
                 this->_frotaLocal.erase(it);

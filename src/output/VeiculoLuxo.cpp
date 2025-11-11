@@ -1,5 +1,7 @@
 #include "VeiculoLuxo.hpp"
-#include <iostream>
+#include "Veiculo.hpp"
+#include <string>
+
 
 const std::map<std::string, double> VeiculoLuxo::_tabelaDePrecos = {
     {"Ferrari",      4500.00}, 
@@ -14,14 +16,13 @@ VeiculoLuxo::VeiculoLuxo(const std::string& placa, const std::string& marca,
 
     }
 
-double VeiculoEconomico::getPrecoDiaria() const override{
+double VeiculoLuxo::getPrecoDiaria() const override{
     std::string meuModelo = this->getModelo();
     auto it = _tabelaDePrecos.find(meuModelo);
 
     if(it != _tabelaDePrecos.end()){
         return it -> second;
     }
-VeiculoLuxo.cpp
     
 }
 

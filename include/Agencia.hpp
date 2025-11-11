@@ -19,6 +19,8 @@ class Agencia{
 
     Agencia(const std::string& nome, const std::string& endereco);
 
+    ~Agencia();
+
     std::string getnome() const;
     std::string getEndereço() const;
 

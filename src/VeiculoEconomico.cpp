@@ -12,17 +12,17 @@ const std::map<std::string, double> VeiculoEconomico::_tabelaDePrecos = {
 };
 
 VeiculoEconomico::VeiculoEconomico(const std::string& placa, const std::string& marca, 
-    const std::string& modelo, int ano) : Veiculo(placa, marca, modelo, ano, "Economico"){
+    const std::string& modelo, int ano, const std::string& categoria) : Veiculo(placa, marca, modelo, ano, categoria){
 
     }
 
-double VeiculoEconomico::getPrecoDiaria() override{
+double VeiculoEconomico::getPrecoDiaria(){
     std::string meuModelo = this->getModelo();
     auto it = _tabelaDePrecos.find(meuModelo);
 
     if(it != _tabelaDePrecos.end()){
         return it -> second;
     }
-    
+
+    return 0.0;
 }
- 

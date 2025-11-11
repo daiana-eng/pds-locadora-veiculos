@@ -12,7 +12,7 @@ SRC_DIR = src
 # NOTA: src/Contrato.cpp foi omitido pois depende de Cliente.hpp/cpp
 SRCS = $(SRC_DIR)/Agencia.cpp \
        $(SRC_DIR)/VeiculoEconomico.cpp \
-       $(SRC_DIR)/output/VeiculoLuxo.cpp
+       $(SRC_DIR)/VeiculoLuxo.cpp
 
 # Arquivo de teste
 TEST_SRC = $(TEST_DIR)/test.cpp
@@ -33,10 +33,10 @@ test: $(TEST_TARGET)
 
 # Regra para linkar o executável de teste
 $(TEST_TARGET): $(TEST_SRC) $(SRCS)
-	@mkdir -p $(BUILD_DIR)
+	-@mkdir $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -o $(TEST_TARGET) $(TEST_SRC) $(SRCS)
 
 # Limpa os arquivos compilados
 clean:
 	@echo "Limpando diretório build..."
-	rm -rf $(BUILD_DIR)
+	@if exist $(BUILD_DIR) rmdir /s /q $(BUILD_DIR)

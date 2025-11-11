@@ -16,7 +16,7 @@ VeiculoLuxo::VeiculoLuxo(const std::string& placa, const std::string& marca,
 
     }
 
-double VeiculoLuxo::getPrecoDiaria() override{
+double VeiculoLuxo::getPrecoDiaria(){
     std::string meuModelo = this->getModelo();
     auto it = _tabelaDePrecos.find(meuModelo);
 
@@ -24,5 +24,5 @@ double VeiculoLuxo::getPrecoDiaria() override{
         return it -> second;
     }
     
+    return 0.0;
 }
-

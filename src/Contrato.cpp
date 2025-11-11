@@ -4,7 +4,7 @@
 #include "Cliente.hpp"
 #include <iostream>
 
-Contrato::Contrato(int id, Cliente* cliente, Veiculo* veiculo,
+ContratoDeAluguel::Contrato(int id, Cliente* cliente, Veiculo* veiculo,
                    Agencia* agenciaretirada, std::string& dataRetirada,
                    std::string& dataPrevisao) :
 
@@ -26,30 +26,30 @@ if (_veiculo != nullptr) {
 }
 
 
-void Contrato::finalizar(const std::string& dataDevolucao, Agencia* agenciaDevolucao){
+void ContratoDeAluguel::finalizar(const std::string& dataDevolucao, Agencia* agenciaDevolucao){
     this->_dataDevolucao = dataDevolucao;
     _agenciaDevolução = agenciaDevolucao;
     _status = StatusContrato::FINALIZADO;
     calcularValorContrato();
 }
 
-int Contrato::getId() const {
+int ContratoDeAluguel::getId() const {
     return _id;
 }
 
-StatusContrato Contrato::getStatus() const{
+StatusContrato ContratoDeAluguel::getStatus() const{
     return _status;
 }
 
-Cliente* Contrato::getCliente() const{
+Cliente* ContratoDeAluguel::getCliente() const{
     return _cliente;
 }
 
-Veiculo* Contrato::getVeiculo() const{
+Veiculo* ContratoDeAluguel::getVeiculo() const{
     return _veiculo;
 }
 
-void Contrato::calcularValorContrato(){
+void ContratoDeAluguel::calcularValorContrato(){
     double diaria = _veiculo->getPrecoDiaria();
 
 

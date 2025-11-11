@@ -16,7 +16,7 @@ VeiculoEconomico::VeiculoEconomico(const std::string& placa, const std::string& 
 
     }
 
-double VeiculoEconomico::getPrecoDiaria() const override{
+double VeiculoEconomico::getPrecoDiaria() override{
     std::string meuModelo = this->getModelo();
     auto it = _tabelaDePrecos.find(meuModelo);
 

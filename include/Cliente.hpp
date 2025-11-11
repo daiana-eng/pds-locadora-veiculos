@@ -2,20 +2,16 @@
 #define CLIENTE_H
 
 #include <string>
+#include "Veiculo.hpp"
+#include "ContratoAluguel.hpp"
 
-class Veiculo;
-class ContratoDeAlugel;
-
-
-class Cliente {
-
-    public:
-      enum class StatusCliente {
+      enum StatusCliente {
         ATIVO, 
         PENDENTE,
         COM_CONTRATO_VENCIDO,
         INATIVO
       };
+class Cliente {
 
     public:
       Cliente(const std::string& nome, int cpf, const std::string& cnh, 
@@ -42,8 +38,8 @@ class Cliente {
       void setStatus(StatusCliente status);
       StatusCliente getStatus() const;
 
-      void associarContrato(ContratoDeAlugel* contrato);
-      ContratoDeAlugel* getContrato() const;
+      void associarContrato(ContratoDeAluguel* contrato);
+      ContratoDeAluguel* getContrato() const;
 
       private:
       std::string nome;
@@ -57,7 +53,7 @@ class Cliente {
 
       Veiculo* veiculoAlugado;
 
-      ContratoDeAlugel* contratoAtual;
+      ContratoDeAluguel* contratoAtual;
 
 
 

@@ -14,7 +14,7 @@ class Veiculo;
 class Agencia;
 
 
-class Contrato{
+class ContratoDeAluguel{
     private:
 
     int _id;
@@ -33,7 +33,7 @@ class Contrato{
 
     public:
 
-    Contrato(int id, Cliente* cliente, Veiculo* veiculo,
+    ContratoDeAluguel(int id, Cliente* cliente, Veiculo* veiculo,
     Agencia* agenciaRetirada, std::string& dataRetirada,
     int _diarias_previstas, std::string& dataPrevisao);
 

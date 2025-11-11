@@ -9,14 +9,14 @@
     } 
 
     std::string Agencia::getnome() const{
-        return _nome;
+        return this->_nome;
     }
-    std::string getEndereço() const{
-        return _endereco;
+    std::string Agencia::getEndereço() const{
+        return this->_endereco;
     }
 
-    const std::vector<Veiculo*>& getFrota() const{
-        return _frotaLocal;
+    const std::vector<Veiculo*>& Agencia::getFrota() const{
+        return this->_frotaLocal;
     }
 
     //função para add um carro na lista
@@ -27,7 +27,7 @@
 
     //função parar tirar um carro da lista
 
-    void removerVeiculo(Veiculo* veiculo){
+    void Agencia::removerVeiculo(Veiculo* veiculo){
         for(auto it = this->_frotaLocal.begin(); it != _frotaLocal.end(); ++it){
             if(*it == veiculo){
                 this->_frotaLocal.erase(it);

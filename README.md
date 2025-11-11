@@ -14,7 +14,7 @@ Integrantes:
 
 
 # Descrição do Problema ✏️
-
+g
 Locadoras de veículos que operam em múltiplas agências enfrentam o desafio de equilibrar a disponibilidade da frota para atender à demanda em diferentes localidades.
 
 A ausência de um veículo específico em determinada agência pode gerar perda de aluguéis, enquanto o excesso de veículos ociosos em outra representa custos desnecessários.

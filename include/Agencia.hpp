@@ -8,24 +8,25 @@
 
 class Veiculo; // Forward declaration
 
-class Agencia {
+class Agencia
+{
 
 private:
     std::string _nome;
     std::string _endereco;
-    std::vector<Veiculo*> _frotaLocal;
+    std::vector<Veiculo *> _frotaLocal;
 
 public:
-    Agencia(const std::string& nome, const std::string& endereco);
+    Agencia(const std::string &nome, const std::string &endereco);
     ~Agencia();
 
     std::string getnome() const;
-    std::string getEndereço() const;
+    std::string getEndereco() const;
 
-    const std::vector<Veiculo*>& getFrota() const;
+    const std::vector<Veiculo *> &getFrota() const;
 
-    //função para add um carro na lista
-    void adicionarVeiculo(Veiculo* veiculo);
+    // função para add um carro na lista
+    void adicionarVeiculo(Veiculo *veiculo);
 
     /**
      * @brief Remove um veículo da frota local (pela placa) e retorna o ponteiro.
@@ -33,7 +34,7 @@ public:
      * @param placa A placa do veículo a ser removido.
      * @return O ponteiro para o Veiculo removido, ou nullptr se não encontrado.
      */
-    Veiculo* removerVeiculo(const std::string& placa); 
+    Veiculo *removerVeiculo(const std::string &placa);
 };
 
 #endif // AGENCIA_H

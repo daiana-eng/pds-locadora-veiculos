@@ -85,7 +85,7 @@ void SistemaLocadora::salvarAgencias()
     for (const auto &par : _agencias)
     {
         arquivo << par.second->getnome() << ","
-                << par.second->getEndereço() << "\n";
+                << par.second->getEndereco() << "\n";
     }
     arquivo.close();
 }

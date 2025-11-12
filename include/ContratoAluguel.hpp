@@ -1,28 +1,28 @@
 #ifndef CONTRATOALUGUEL_H
 #define CONTRATOALUGUEL_H
 
-#include<string>
-#include<iostream>
+#include <string>
+#include <iostream>
 
-enum class StatusContrato{
- ATIVO,
- FINALIZADO
+enum class StatusContrato
+{
+    ATIVO,
+    FINALIZADO
 };
 
 class Cliente;
 class Veiculo;
 class Agencia;
 
-
-class ContratoDeAluguel{
-    private:
-
+class ContratoDeAluguel
+{
+private:
     int _id;
-    Cliente* _cliente;
-    Veiculo* _veiculo;
-    Agencia* _agenciaRetirada;
-    Agencia* _agenciaDevolução;
-    
+    Cliente *_cliente;
+    Veiculo *_veiculo;
+    [[maybe_unused]] Agencia *_agenciaRetirada;
+    Agencia *_agenciaDevolucao;
+
     std::string _dataRetirada;
     std::string _dataPrevisao;
     std::string _dataDevolucao;
@@ -31,24 +31,20 @@ class ContratoDeAluguel{
 
     double _valorDoContrato;
 
-    public:
+public:
+    ContratoDeAluguel(int id, Cliente *cliente, Veiculo *veiculo,
+                      Agencia *agenciaRetirada, std::string &dataRetirada,
+                      int _diarias_previstas, std::string &dataPrevisao);
 
-    ContratoDeAluguel(int id, Cliente* cliente, Veiculo* veiculo,
-    Agencia* agenciaRetirada, std::string& dataRetirada,
-    int _diarias_previstas, std::string& dataPrevisao);
+    void finalizar(const std::string &_dataDevolucao, Agencia *agenciaDevolucao);
 
-     void finalizar(const std::string& _dataDevolucao, Agencia* agenciaDevolucao);
-    
-     int getId() const;
-     StatusContrato getStatus() const;
-     Cliente* getCliente() const;
-     Veiculo* getVeiculo() const;
+    int getId() const;
+    StatusContrato getStatus() const;
+    Cliente *getCliente() const;
+    Veiculo *getVeiculo() const;
 
-     private:
-
-     void calcularValorContrato();
-
+private:
+    void calcularValorContrato();
 };
-
 
 #endif // CONTRATO_H

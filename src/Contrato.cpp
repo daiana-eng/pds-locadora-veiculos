@@ -65,7 +65,7 @@ ContratoDeAluguel::ContratoDeAluguel(int id, Cliente *cliente, Veiculo *veiculo,
                                                                   _cliente(cliente),
                                                                   _veiculo(veiculo),
                                                                   _agenciaRetirada(agenciaretirada),
-                                                                  _agenciaDevolução(nullptr),
+                                                                  _agenciaDevolucao(nullptr),
                                                                   _dataRetirada(dataRetirada),
                                                                   _dataPrevisao(dataPrevisao),
                                                                   _dataDevolucao(""),
@@ -73,6 +73,7 @@ ContratoDeAluguel::ContratoDeAluguel(int id, Cliente *cliente, Veiculo *veiculo,
                                                                   _valorDoContrato(0.0)
 
 {
+    (void)diarias_previstas; // Suppress unused parameter warning
     if (_veiculo != nullptr)
     {
         _veiculo->setStatus(StatusVeiculo::ALUGADO);
@@ -82,7 +83,7 @@ ContratoDeAluguel::ContratoDeAluguel(int id, Cliente *cliente, Veiculo *veiculo,
 void ContratoDeAluguel::finalizar(const std::string &dataDevolucao, Agencia *agenciaDevolucao)
 {
     this->_dataDevolucao = dataDevolucao;
-    _agenciaDevolução = agenciaDevolucao;
+    _agenciaDevolucao = agenciaDevolucao;
     _status = StatusContrato::FINALIZADO;
 
     // Calcula o valor final no momento da finalização

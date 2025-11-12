@@ -489,11 +489,11 @@ void SistemaLocadora::executarOtimizacaoFrota(int limiteMin, int limiteMax)
             }
         }
 
-        if (consultarVeiculosDisponiveis(origem->getnome()).size() <= limiteMax)
+        if (consultarVeiculosDisponiveis(origem->getnome()).size() <= static_cast<size_t>(limiteMax))
         {
             agenciasComSobra.pop_front();
         }
-        if (consultarVeiculosDisponiveis(destino->getnome()).size() >= limiteMin)
+        if (consultarVeiculosDisponiveis(destino->getnome()).size() >= static_cast<size_t>(limiteMin))
         {
             agenciasComFalta.pop_front();
         }

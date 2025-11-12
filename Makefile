@@ -49,8 +49,13 @@ test: dirs $(TEST_TARGET)
 
 # Cria os diretórios necessários (CORRIGIDO PARA WINDOWS)
 dirs:
-	@if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
-	@if not exist "data" mkdir "data"
+ifeq ($(OS),Windows_NT)
+	@cmd /C "if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)"
+	@cmd /C "if not exist data mkdir data"
+else
+	@mkdir -p $(BUILD_DIR)
+	@mkdir -p data
+endif
 
 # Regra para linkar o executável principal
 $(TARGET): $(OBJS)
@@ -67,8 +72,11 @@ $(TEST_TARGET): $(TEST_SRC) $(TEST_OBJS)
 
 # Limpa os arquivos compilados (CORRIGIDO PARA WINDOWS)
 clean:
-	@echo Limpando diretório build...
-	@if exist "$(BUILD_DIR)" rmdir /S /Q "$(BUILD_DIR)"
+ifeq ($(OS),Windows_NT)
+	@$(RMDIR) "$(BUILD_DIR)"
+else
+	@$(RMDIR) "$(BUILD_DIR)"
+endif
 	@echo Limpeza concluída.
 
 # Informações sobre o projeto

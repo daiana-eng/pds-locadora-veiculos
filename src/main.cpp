@@ -127,21 +127,24 @@ void gerente_listar_agencias_e_frotas(SistemaLocadora &sistema)
         return;
     }
 
-    for (auto const &[nome, agencia] : agencias)
+    for (auto it = agencias.begin(); it != agencias.end(); ++it)
     {
-        std::cout << "\n--- Agencia: " << agencia->getnome() << " (" << agencia->getEndereco() << ") ---" << std::endl;
-        const auto &frota = agencia->getFrota();
-        if (frota.empty())
+        Agencia *agencia = it->second;
         {
-            std::cout << "  (Frota vazia)" << std::endl;
-            continue;
-        }
-        for (Veiculo *v : frota)
-        {
-            std::cout << "  - [" << v->getPlaca() << "] " << v->getModelo()
-                      << " (Status: "
-                      << (v->getStatus() == StatusVeiculo::DISPONIVEL ? "Disponivel" : "Alugado")
-                      << ")" << std::endl;
+            std::cout << "\n--- Agencia: " << agencia->getnome() << " (" << agencia->getEndereco() << ") ---" << std::endl;
+            const auto &frota = agencia->getFrota();
+            if (frota.empty())
+            {
+                std::cout << "  (Frota vazia)" << std::endl;
+                continue;
+            }
+            for (Veiculo *v : frota)
+            {
+                std::cout << "  - [" << v->getPlaca() << "] " << v->getModelo()
+                          << " (Status: "
+                          << (v->getStatus() == StatusVeiculo::DISPONIVEL ? "Disponivel" : "Alugado")
+                          << ")" << std::endl;
+            }
         }
     }
 }

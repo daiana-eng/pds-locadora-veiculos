@@ -436,8 +436,9 @@ void SistemaLocadora::executarOtimizacaoFrota(int limiteMin, int limiteMax)
     std::list<Agencia *> agenciasComSobra;
     std::list<Agencia *> agenciasComFalta;
 
-    for (auto const &[nome, agencia] : _agencias)
+    for (auto it = _agencias.begin(); it != _agencias.end(); ++it)
     {
+        Agencia *agencia = it->second;
         int disponiveis = 0;
         for (Veiculo *v : agencia->getFrota())
         {

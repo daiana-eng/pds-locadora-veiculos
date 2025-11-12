@@ -64,7 +64,7 @@ ContratoDeAluguel::ContratoDeAluguel(int id, Cliente *cliente, Veiculo *veiculo,
                                                                   _id(id),
                                                                   _cliente(cliente),
                                                                   _veiculo(veiculo),
-                                                                  _agenciaRetirada(agenciaretirada),
+                                                                  //   _agenciaRetirada(agenciaretirada),
                                                                   _agenciaDevolucao(nullptr),
                                                                   _dataRetirada(dataRetirada),
                                                                   _dataPrevisao(dataPrevisao),
@@ -73,6 +73,7 @@ ContratoDeAluguel::ContratoDeAluguel(int id, Cliente *cliente, Veiculo *veiculo,
                                                                   _valorDoContrato(0.0)
 
 {
+    (void)agenciaretirada;   // Suppress unused parameter warning
     (void)diarias_previstas; // Suppress unused parameter warning
     if (_veiculo != nullptr)
     {

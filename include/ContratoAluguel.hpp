@@ -20,7 +20,7 @@ private:
     int _id;
     Cliente *_cliente;
     Veiculo *_veiculo;
-    [[maybe_unused]] Agencia *_agenciaRetirada;
+    // maybe_unused: Agencia *_agenciaRetirada;
     Agencia *_agenciaDevolucao;
 
     std::string _dataRetirada;
